@@ -2,7 +2,7 @@ FROM jetbrains/teamcity-agent:latest
 
 MAINTAINER Aleksei Chernov <kot.lex@gmail.com>
 
-RUN apt-get install -y nodejs npm \ 
+RUN apt-get install -y nodejs npm sudo \ 
     && curl -sS http://cdn.sencha.com/cmd/6.2.2/no-jre/SenchaCmd-6.2.2-linux-amd64.sh.zip > /tmp/sencha.zip \
     && unzip /tmp/sencha.zip -d /tmp \
-    && /tmp/SenchaCmd*.sh -q --all
+    && sudo -u buildagent /tmp/SenchaCmd*.sh -q --all
