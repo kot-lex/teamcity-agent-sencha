@@ -8,4 +8,4 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     && unzip /tmp/sencha.zip -d /tmp \
     && sudo -u buildagent /tmp/SenchaCmd*.sh -q --all
 
-ENV PATH /home/buildagent/Sencha/Cmd/:$PATH
+ENV PATH /home/buildagent/bin/Sencha/Cmd/:$PATH
